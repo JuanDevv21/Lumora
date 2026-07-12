@@ -1,5 +1,5 @@
 .hero {
-  height: 700px;
+  height: 550px;
   margin-top: 45px;
   width: 70%;
   justify-self: center;
@@ -19,7 +19,7 @@
   text-align: center;
   width: 800px;
   font-size: 18px;
-  color: #1F2430;
+  color: #7A8191;
   margin-top: 30px;
   margin-bottom: 50px;
 }
@@ -41,4 +41,123 @@
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.section1 {
+  display: flex;
+  width: 70%;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+.section1 div {
+  border: 1px dashed #7A8191;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+
+.section1 p {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.section1 span {
+    color: #7A8191;
+}
+
+.section2 {
+  margin-top: 222px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-self: center;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.services h2 {
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.services p {
+  color: #7A8191;
+}
+
+.services span {
+  width: 800px;
+  font-size: 18px;
+  color: #7A8191;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #FCFBFE;
+  color: #888888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.icono {
+  transition: filter 0.3s ease; 
+}
+
+.contenedor:hover {
+  color: #ffffff;
+  background-color: #6D5EF5;
+}
+
+.contenedor:hover .icono {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.serviceoptions {
+  display: flex;
+  margin-top: 1px;
+}
+
+.servicecontent {
+  border: 1px solid #7A8191;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5px;
+  margin-right: 0.5px;
+}
+
+.servicecontent p {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.servicecontent span {
+  margin-left: 20px;
+  margin-top: 15px;
+  color: #7A8191;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.servicecontent:hover {
+  background-color: #E9E7F5;
 }
