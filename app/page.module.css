@@ -161,3 +161,107 @@
 .servicecontent:hover {
   background-color: #E9E7F5;
 }
+
+.section3 {
+  margin-top: 222px;
+  width: 70%;
+  justify-self: center;
+  display: flex;
+  margin-bottom: 222px;
+}
+
+.section3left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stickcomponent {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+}
+
+.section3left span {
+  font-size: 14px;
+  color: #5A4BE8;
+  letter-spacing: 1px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.section3left h3 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.section3left p {
+  margin-top: 20px;
+  color: #7A8191;
+  font-size: 18px;
+  width: 570px;
+}
+
+.section3right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.section3comp {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.section3comp div {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section3comp p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section3comp span {
+  color: #7A8191;
+  font-size: 16px;
+}
+
+.section4 {
+  width: 70%;
+  justify-self: center;
+  display: flex;
+}
+
+.section4left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.section4left span {
+  color: #5A4BE8;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.section4left h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.section4left p {
+  width: 500px;
+  color: #7A8191;
+  font-size: 18px;
+}
+
+.section4right {
+  width: 50%;
+}
+

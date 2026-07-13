@@ -1,0 +1,19 @@
+.buttonq {
+    border-bottom: 1px solid #7A8191;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+}
+
+.buttonq button {
+    border: none;
+    background-color: #FCFBFE;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.buttonq p {
+    font-size: 16px;
+    color: #7A8191;
+}

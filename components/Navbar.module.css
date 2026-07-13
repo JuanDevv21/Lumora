@@ -5,8 +5,8 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10px 0;
-    position: -webkit-sticky;
-    position: sticky;
+    position: -webkit-fixed;
+    position: fixed;
     top: 0;
     z-index: 1000;
     background-color: #FCFBFE;

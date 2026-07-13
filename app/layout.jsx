@@ -4,7 +4,9 @@ const RootLayout = ({children}) => {
   return (
     <html>
       <body>
-        <head></head>
+        <header>
+          <title>Lumora</title>
+        </header>
         <main>{children}</main>
       </body>
     </html>

@@ -9,6 +9,14 @@ import Compass from '../assets/compass.svg'
 import Message from '../assets/message.svg'
 import Search from '../assets/search.svg'
 import Workflow from '../assets/workflow.svg'
+
+import Gauge from '../assets/gauge.svg'
+import Handshake from '../assets/handshake.svg'
+import Shield from '../assets/shield.svg'
+import Users from '../assets/users.svg'
+
+import FAQ from "@/components/FAQ"
+
 const Home = () => {
   return (
     <>
@@ -111,7 +119,54 @@ const Home = () => {
       </section>
 
       <section className={styles.section3}>
+        <div className={styles.section3left}>
+          <div className={styles.stickcomponent}>
+            <span>¿POR QUÉ LUMORA?</span>
+            <h3>El cuidado de un Estudio, <h3 style={{color: '#7A8191'}}>El rigor de una Ingenieria</h3></h3>
+            <p>No vendemos horas, vendemos resultados. Nuestro equipo, reducido y de alto nivel, nos permite mantener criterios firmes sobre la calidad, la comunicación y el oficio.</p>
+          </div>
+        </div>
+        <div className={styles.section3right}>
+          <div className={styles.section3comp}>
+            <Image src={Users} alt="Usuarios"></Image>
+            <div>
+              <p>Un equipo experimentado</p>
+              <span>Nuestro equipo esta conformado por profesionales con experiencia real en entornos de produccion, sin subcontratos ni traspasos de tareas.</span>
+            </div>
+          </div>
+          <div className={styles.section3comp}>
+            <Image src={Handshake} alt="Handshake"></Image>
+            <div>
+              <p>Atencion de primer nivel</p>
+              <span>Menos clientes, mayor enfoque. Hablas directamente con las personas que desarrollan tu producto.</span>
+            </div>
+          </div>
+          <div className={styles.section3comp}>
+            <Image src={Gauge} alt="Dashboard"></Image>
+            <div>
+              <p>Entregas de confianza</p>
+              <span>Hitos claros, demostraciones semanales y plazos predecibles. Sin sorpresas al finalizar los plazos.</span>
+            </div>
+          </div>
+          <div className={styles.section3comp}>
+            <Image src={Shield} alt="Escudo"></Image>
+            <div>
+              <p>Hecho para durar</p>
+              <span>Escribimos código que puedes mantener, traspasar y escalar, con documentación y una arquitectura limpia.</span>          
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section className={styles.section4}>
+        <div className={styles.section4left}>
+          <span>FAQ</span>
+          <h3>Respuestas directas</h3>
+          <p>¿Tienes alguna pregunta que no aparece aquí? Envíala a través del formulario de contacto; respondemos en un plazo de un día hábil.</p>
+        </div>
+        <div className={styles.section4right}>
+          <FAQ></FAQ>
+        </div>
       </section>
     </>
   )
