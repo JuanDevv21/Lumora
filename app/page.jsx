@@ -15,7 +15,12 @@ import Handshake from '../assets/handshake.svg'
 import Shield from '../assets/shield.svg'
 import Users from '../assets/users.svg'
 
+import Mail from '../assets/mail.svg'
+import Map from '../assets/map.svg'
+
 import FAQ from "@/components/FAQ"
+import Formulario from "@/components/Formulario"
+
 
 const Home = () => {
   return (
@@ -30,7 +35,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.section1}>
+      <section className={styles.section1} id="section1">
         <div>
           <p>10+</p>
           <span>Proyectos entregados</span>
@@ -49,7 +54,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.section2}>
+      <section className={styles.section2} id="section2">
         <div className={styles.services}>
           <h2>Todo lo que necesitas para construir, <p>automatizar y crecer</p></h2>
           <span>Desde un único agente de IA hasta una plataforma de producto integral, trabajamos como un socio integrado, no como un simple proveedor. Cada proyecto se define, se presupuesta y se ejecuta con total transparencia.</span>
@@ -88,28 +93,28 @@ const Home = () => {
           <div className={styles.serviceoptions}> 
             <div className={styles.servicecontent} style={{borderBottomLeftRadius: '20px'}}>
               <div className={styles.contenedor}>
-                <Image src={Workflow} alt="Workflow" width={30} height={30}></Image>
+                <Image src={Workflow} alt="Workflow" width={30} height={30} className={styles.icono}></Image>
               </div>
               <p>Automatizacion de procesos</p>
               <span>Elimine el trabajo repetitivo con automatizaciones personalizadas en su pila existente.</span>
             </div>
             <div className={styles.servicecontent}>
               <div className={styles.contenedor}>
-                <Image src={Briefcase} alt="Briefcase" width={30} height={30}></Image>
+                <Image src={Briefcase} alt="Briefcase" width={30} height={30} className={styles.icono}></Image>
               </div>
               <p>Proyectos freelance</p>
               <span>Colaboraciones específicas para fundadores y equipos que necesitan ingeniería de alto nivel... y rápido.</span>
             </div>
             <div className={styles.servicecontent}>
               <div className={styles.contenedor}>
-                <Image src={Search} alt="Search" width={30} height={30}></Image>
+                <Image src={Search} alt="Search" width={30} height={30} className={styles.icono}></Image>
               </div>
               <p>Optimizacion SEO</p>
               <span>SEO técnico y de contenido de efecto acumulativo: diseñado para atraer tráfico cualificado.</span>
             </div>
             <div className={styles.servicecontent} style={{borderBottomRightRadius: '20px'}}>
               <div className={styles.contenedor}>
-                <Image src={Compass} alt="Compass" width={30} height={30}></Image>
+                <Image src={Compass} alt="Compass" width={30} height={30} className={styles.icono}></Image>
               </div>
               <p>Consultas digitales</p>
               <span>Estrategia, arquitectura y hojas de ruta para ayudarle a tomar decisiones técnicas con confianza.</span>
@@ -118,11 +123,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.section3}>
+      <section className={styles.section3} id="section3">
         <div className={styles.section3left}>
           <div className={styles.stickcomponent}>
             <span>¿POR QUÉ LUMORA?</span>
-            <h3>El cuidado de un Estudio, <h3 style={{color: '#7A8191'}}>El rigor de una Ingenieria</h3></h3>
+            <h3>El cuidado de un Estudio, <p style={{color: '#7A8191', fontSize: '40px', lineHeight: '10px'}}>El rigor de una Ingenieria</p></h3>
             <p>No vendemos horas, vendemos resultados. Nuestro equipo, reducido y de alto nivel, nos permite mantener criterios firmes sobre la calidad, la comunicación y el oficio.</p>
           </div>
         </div>
@@ -158,7 +163,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.section4}>
+    {/* FALTA SECCION EN LA QUE SE DESCRIBE EL PROCESO Y LINKEARLOS DESDE EL NAVBAR*/ }
+
+      <section className={styles.section4} id="section4">
         <div className={styles.section4left}>
           <span>FAQ</span>
           <h3>Respuestas directas</h3>
@@ -166,6 +173,29 @@ const Home = () => {
         </div>
         <div className={styles.section4right}>
           <FAQ></FAQ>
+        </div>
+      </section>
+
+      <section className={styles.section5} id="section5">
+        <div className={styles.section5left}>
+          <span style={{color: '#6D5EF5', fontWeight: '900', marginBottom: '20px'}}>CONTACTO</span>
+          <h3 style={{fontSize: '40px', width: '500px', marginBottom: '20px', lineHeight: '40px'}}>Construyamos algo que valga la pena lanzar.</h3>
+          <p style={{color: '#7A8191', width: '600px', marginBottom: '40px'}}>Cuéntanos sobre tu proyecto o idea. Te responderemos en un plazo de un día hábil indicándote los siguientes pasos, ya sea una llamada, una definición del alcance o una recomendación útil.</p>
+          <div className={styles.section5bloq}>
+            <div>
+              <Image src={Mail} alt="Email"></Image>
+            </div>
+            <span>lumoraclientsupport@gmail.com</span>
+          </div>
+          <div className={styles.section5bloq}>
+            <div>
+              <Image src={Map} alt="Mapa"></Image>
+            </div>
+            <span>Cali, Colombia - Presencia global</span>
+          </div>
+        </div>
+        <div>
+          <Formulario></Formulario>
         </div>
       </section>
     </>

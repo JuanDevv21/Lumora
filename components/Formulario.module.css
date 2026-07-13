@@ -1,0 +1,60 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+
+.contenedor label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campos input {
+    width: 500;
+    height: 35px;
+    padding: 10px 10px;
+    font-family: 'Ones';
+    border: 1px solid #E9E7F5;
+    border-radius: 10px;
+}
+
+.campos select {
+    width: 500;
+    height: 35px;
+    font-family: 'Ones';
+    border: 1px solid #E9E7F5;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+.campos textarea {
+    width: 500;
+    height: 100px;
+    padding: 10px 5px;
+    font-family: 'Ones';
+    border: 1px solid #E9E7F5;
+    border-radius: 10px;
+}
+
+.sendbtn {
+    border: 1px solid #6D5EF5;
+    height: 40px;
+    width: 500px;
+    color: white;
+    background-color: #6D5EF5;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.sendbtn:hover {
+    background-color: #5A4BE8;
+    cursor: pointer;
+}

@@ -193,7 +193,8 @@
 
 .section3left h3 {
   font-size: 40px;
-  line-height: 50px;
+  line-height: 30px;
+  margin-top: 30px;
 }
 
 .section3left p {
@@ -235,6 +236,7 @@
   width: 70%;
   justify-self: center;
   display: flex;
+  margin-bottom: 222px;
 }
 
 .section4left {
@@ -264,4 +266,39 @@
 .section4right {
   width: 50%;
 }
+
+.section5 {
+  display: flex;
+  width: 70%;
+  justify-self: center;
+  margin-bottom: 222px;
+}
+
+.section5left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #E9E7F5;
+  padding: 20px 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.section5bloq {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  margin-bottom: 0px;
+}
+
+.section5bloq img {
+  border: 1px solid #6D5EF5;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+
 
