@@ -1,205 +1,271 @@
-import Navbar from "@/components/Navbar"
+import Image from 'next/image'
+import Link from 'next/link'
+import {
+  ArrowRight,
+  Blocks,
+  BotMessageSquare,
+  CheckCircle2,
+  CircleCheck,
+  Code2,
+  Compass,
+  FileSearch,
+  Layers3,
+  Mail,
+  MapPin,
+  PenTool,
+  Rocket,
+  Route,
+  ShieldCheck,
+  Sparkles,
+  Workflow,
+} from 'lucide-react'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import FAQ from '@/components/FAQ'
+import Formulario from '@/components/Formulario'
 import styles from './page.module.css'
-import Image from "next/image"
-import Bot from '../assets/bot.svg'
-import Briefcase from '../assets/briefcase.svg'
-import Building from '../assets/building.svg'
-import Code from '../assets/code.svg'
-import Compass from '../assets/compass.svg'
-import Message from '../assets/message.svg'
-import Search from '../assets/search.svg'
-import Workflow from '../assets/workflow.svg'
 
-import Gauge from '../assets/gauge.svg'
-import Handshake from '../assets/handshake.svg'
-import Shield from '../assets/shield.svg'
-import Users from '../assets/users.svg'
+const services = [
+  {
+    number: '01',
+    slug: 'software-a-medida',
+    icon: Blocks,
+    title: 'Software a medida',
+    description: 'Creamos herramientas alrededor de tu operación, sin obligar a tu equipo a adaptarse a un producto genérico.',
+    items: ['Plataformas y aplicaciones web', 'Portales y herramientas internas', 'Modernización de sistemas'],
+  },
+  {
+    number: '02',
+    slug: 'automatizacion-e-integraciones',
+    icon: Workflow,
+    title: 'Automatización e integraciones',
+    description: 'Conectamos tareas, datos y sistemas para reducir trabajo repetitivo y mejorar la trazabilidad.',
+    items: ['Automatización de procesos', 'Integraciones mediante API', 'Flujos de aprobación y control'],
+  },
+  {
+    number: '03',
+    slug: 'inteligencia-artificial-aplicada',
+    icon: BotMessageSquare,
+    title: 'Inteligencia artificial aplicada',
+    description: 'Integramos IA cuando existe un proceso, un objetivo y una forma clara de medir el resultado.',
+    items: ['Agentes y asistentes internos', 'Búsqueda y extracción de información', 'IA integrada en software existente'],
+  },
+  {
+    number: '04',
+    slug: 'consultoria-tecnologica',
+    icon: Compass,
+    title: 'Consultoría y evolución',
+    description: 'Analizamos procesos, riesgos y opciones antes de comprometer una solución tecnológica.',
+    items: ['Diagnóstico y arquitectura', 'Diseño de producto digital', 'Auditoría y modernización'],
+  },
+]
 
-import Mail from '../assets/mail.svg'
-import Map from '../assets/map.svg'
+const method = [
+  { number: '01', title: 'Comprender', text: 'Conocemos el negocio, las personas, el proceso actual y sus restricciones.', icon: FileSearch },
+  { number: '02', title: 'Diagnosticar', text: 'Analizamos causas, riesgos, dependencias, datos y oportunidades.', icon: Route },
+  { number: '03', title: 'Diseñar', text: 'Definimos flujos, experiencia y arquitectura antes de construir.', icon: PenTool },
+  { number: '04', title: 'Construir', text: 'Desarrollamos por iteraciones, priorizando primero el valor más importante.', icon: Code2 },
+  { number: '05', title: 'Validar', text: 'Probamos funcionamiento, integraciones, experiencia y aceptación.', icon: CircleCheck },
+  { number: '06', title: 'Implementar', text: 'Publicamos, documentamos, capacitamos y planeamos la evolución.', icon: Rocket },
+]
 
-import FAQ from "@/components/FAQ"
-import Formulario from "@/components/Formulario"
+const differentiators = [
+  {
+    icon: Layers3,
+    title: 'Comprensión antes que desarrollo',
+    text: 'Cada proyecto comienza analizando el problema, los usuarios, el proceso y los objetivos.',
+  },
+  {
+    icon: CheckCircle2,
+    title: 'Entregas progresivas',
+    text: 'Trabajamos por etapas, con demostraciones y validaciones frecuentes.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Tecnología responsable',
+    text: 'Consideramos seguridad, privacidad, accesibilidad, documentación y sostenibilidad técnica.',
+  },
+]
 
-
-const Home = () => {
+export default function Home() {
   return (
     <>
-      <Navbar></Navbar>
-      <section className={styles.hero}>
-        <h1>Software, IA y automatización creados <span className={styles.textodegradado}>con propósito.</span></h1>
-        <span className={styles.herotext}>Lumora es un equipo de ingenieros informáticos que ayuda a empresas ambiciosas a lanzar agentes de IA, plataformas a medida y automatización de procesos, combinando la atención personalizada de un estudio boutique con la fiabilidad de un equipo de ingeniería sénior.</span>
-        <div className={styles.actionbuttons}>
-          <p style={{border: '1px solid #6D5EF5', color: 'white', backgroundColor: '#6D5EF5'}}>Agenda una reunion</p>
-          <p style={{border: '1px solid #7A8191'}}>Explora nuestros servicios</p>
-        </div>
-      </section>
+      <Navbar />
 
-      <section className={styles.section1} id="section1">
-        <div>
-          <p>10+</p>
-          <span>Proyectos entregados</span>
-        </div>
-        <div>
-          <p>+2</p>
-          <span>Años de experiencia</span>
-        </div>
-        <div>
-          <p>5</p>
-          <span>Industrias trabajadas</span>
-        </div>
-        <div>
-          <p>100%</p>
-          <span>Entregas realizadas</span>
-        </div>
-      </section>
+      <main>
+        <section className={styles.hero} id="inicio">
+          <div className={styles.heroGlow} aria-hidden="true" />
+          <div className={styles.container}>
+            <div className={styles.heroGrid}>
+              <div className={styles.heroCopy}>
+                <p className={styles.eyebrow}>Estudio de software y consultoría tecnológica</p>
+                <h1>Transformamos procesos complejos en <span>soluciones digitales claras.</span></h1>
+                <p className={styles.heroText}>Software a medida, automatización e inteligencia artificial para empresas en Colombia, diseñados alrededor de su operación real.</p>
+                <div className={styles.heroActions}>
+                  <Link className={styles.primaryButton} href="/contacto">
+                    Cuéntanos tu proyecto <ArrowRight size={18} aria-hidden="true" />
+                  </Link>
+                  <Link className={styles.secondaryButton} href="#servicios">Explorar servicios</Link>
+                </div>
+                <p className={styles.heroNote}><Sparkles size={16} aria-hidden="true" /> Claridad desde el diagnóstico hasta la implementación.</p>
+              </div>
 
-      <section className={styles.section2} id="section2">
-        <div className={styles.services}>
-          <h2>Todo lo que necesitas para construir, <p>automatizar y crecer</p></h2>
-          <span>Desde un único agente de IA hasta una plataforma de producto integral, trabajamos como un socio integrado, no como un simple proveedor. Cada proyecto se define, se presupuesta y se ejecuta con total transparencia.</span>
-        </div>
-        <div>
-          <div className={styles.serviceoptions}>
-            <div className={styles.servicecontent} style={{borderTopLeftRadius: '20px'}}>
-              <div className={styles.contenedor}>
-                <Image src={Bot} alt="Robot" width={30} height={30} className={styles.icono}></Image>
+              <div className={styles.heroVisual} aria-label="Proceso de Lumora: comprender, conectar y evolucionar">
+                <div className={styles.visualHeader}>
+                  <span>Del proceso real</span>
+                  <Image src="/brand/isotipo/lumora-isotipo-color.svg" alt="Isotipo de Lumora" width={58} height={58} priority />
+                </div>
+                <div className={styles.visualFlow}>
+                  <div>
+                    <span className={styles.flowIcon}><FileSearch size={20} /></span>
+                    <p>Comprender</p>
+                    <small>Personas, operación y objetivos</small>
+                  </div>
+                  <ArrowRight className={styles.flowArrow} size={20} aria-hidden="true" />
+                  <div>
+                    <span className={styles.flowIcon}><Workflow size={20} /></span>
+                    <p>Conectar</p>
+                    <small>Datos, tareas y sistemas</small>
+                  </div>
+                  <ArrowRight className={styles.flowArrow} size={20} aria-hidden="true" />
+                  <div>
+                    <span className={styles.flowIcon}><Rocket size={20} /></span>
+                    <p>Evolucionar</p>
+                    <small>Resultados que pueden crecer</small>
+                  </div>
+                </div>
+                <div className={styles.visualResult}>
+                  <CheckCircle2 size={20} aria-hidden="true" />
+                  <div>
+                    <span>Una solución clara</span>
+                    <small>Útil, mantenible y orientada a resultados.</small>
+                  </div>
+                </div>
               </div>
-              <p>Agentes IA</p>
-              <span>Agentes autónomos que planifican, actúan y se integran con tus herramientas, desde la investigación hasta las operaciones.</span>
             </div>
-            <div className={styles.servicecontent}>
-              <div className={styles.contenedor}>
-                <Image src={Message} alt="Message" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Chatbots</p>
-              <span>Asistentes conversacionales adaptados a tu marca, base de conocimientos y canales.</span>
-            </div>
-            <div className={styles.servicecontent}>
-              <div className={styles.contenedor}>
-                <Image src={Code} alt="Code" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Desarrollo web personalizado</p>
-              <span>Sitios y aplicaciones web de alto rendimiento desarrollados con tecnologías modernas y escalables.</span>
-            </div>
-            <div className={styles.servicecontent} style={{borderTopRightRadius: '20px'}}>
-              <div className={styles.contenedor}>
-                <Image src={Bot} alt="Robot" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Software empresarial</p>
-              <span>Plataformas internas, paneles de control y sistemas de back-office que se ajustan a los flujos de trabajo reales.</span>
-            </div>
-          </div>
-          <div className={styles.serviceoptions}> 
-            <div className={styles.servicecontent} style={{borderBottomLeftRadius: '20px'}}>
-              <div className={styles.contenedor}>
-                <Image src={Workflow} alt="Workflow" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Automatizacion de procesos</p>
-              <span>Elimine el trabajo repetitivo con automatizaciones personalizadas en su pila existente.</span>
-            </div>
-            <div className={styles.servicecontent}>
-              <div className={styles.contenedor}>
-                <Image src={Briefcase} alt="Briefcase" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Proyectos freelance</p>
-              <span>Colaboraciones específicas para fundadores y equipos que necesitan ingeniería de alto nivel... y rápido.</span>
-            </div>
-            <div className={styles.servicecontent}>
-              <div className={styles.contenedor}>
-                <Image src={Search} alt="Search" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Optimizacion SEO</p>
-              <span>SEO técnico y de contenido de efecto acumulativo: diseñado para atraer tráfico cualificado.</span>
-            </div>
-            <div className={styles.servicecontent} style={{borderBottomRightRadius: '20px'}}>
-              <div className={styles.contenedor}>
-                <Image src={Compass} alt="Compass" width={30} height={30} className={styles.icono}></Image>
-              </div>
-              <p>Consultas digitales</p>
-              <span>Estrategia, arquitectura y hojas de ruta para ayudarle a tomar decisiones técnicas con confianza.</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className={styles.section3} id="section3">
-        <div className={styles.section3left}>
-          <div className={styles.stickcomponent}>
-            <span>¿POR QUÉ LUMORA?</span>
-            <h3>El cuidado de un Estudio, <p style={{color: '#7A8191', fontSize: '40px', lineHeight: '10px'}}>El rigor de una Ingenieria</p></h3>
-            <p>No vendemos horas, vendemos resultados. Nuestro equipo, reducido y de alto nivel, nos permite mantener criterios firmes sobre la calidad, la comunicación y el oficio.</p>
-          </div>
-        </div>
-        <div className={styles.section3right}>
-          <div className={styles.section3comp}>
-            <Image src={Users} alt="Usuarios"></Image>
-            <div>
-              <p>Un equipo experimentado</p>
-              <span>Nuestro equipo esta conformado por profesionales con experiencia real en entornos de produccion, sin subcontratos ni traspasos de tareas.</span>
+            <div className={styles.principles} aria-label="Principios de trabajo">
+              <p><span>01</span> Comprensión del negocio</p>
+              <p><span>02</span> Diseño de producto</p>
+              <p><span>03</span> Ingeniería de software</p>
             </div>
           </div>
-          <div className={styles.section3comp}>
-            <Image src={Handshake} alt="Handshake"></Image>
-            <div>
-              <p>Atencion de primer nivel</p>
-              <span>Menos clientes, mayor enfoque. Hablas directamente con las personas que desarrollan tu producto.</span>
-            </div>
-          </div>
-          <div className={styles.section3comp}>
-            <Image src={Gauge} alt="Dashboard"></Image>
-            <div>
-              <p>Entregas de confianza</p>
-              <span>Hitos claros, demostraciones semanales y plazos predecibles. Sin sorpresas al finalizar los plazos.</span>
-            </div>
-          </div>
-          <div className={styles.section3comp}>
-            <Image src={Shield} alt="Escudo"></Image>
-            <div>
-              <p>Hecho para durar</p>
-              <span>Escribimos código que puedes mantener, traspasar y escalar, con documentación y una arquitectura limpia.</span>          
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-    {/* FALTA SECCION EN LA QUE SE DESCRIBE EL PROCESO Y LINKEARLOS DESDE EL NAVBAR*/ }
-
-      <section className={styles.section4} id="section4">
-        <div className={styles.section4left}>
-          <span>FAQ</span>
-          <h3>Respuestas directas</h3>
-          <p>¿Tienes alguna pregunta que no aparece aquí? Envíala a través del formulario de contacto; respondemos en un plazo de un día hábil.</p>
-        </div>
-        <div className={styles.section4right}>
-          <FAQ></FAQ>
-        </div>
-      </section>
-
-      <section className={styles.section5} id="section5">
-        <div className={styles.section5left}>
-          <span style={{color: '#6D5EF5', fontWeight: '900', marginBottom: '20px'}}>CONTACTO</span>
-          <h3 style={{fontSize: '40px', width: '500px', marginBottom: '20px', lineHeight: '40px'}}>Construyamos algo que valga la pena lanzar.</h3>
-          <p style={{color: '#7A8191', width: '600px', marginBottom: '40px'}}>Cuéntanos sobre tu proyecto o idea. Te responderemos en un plazo de un día hábil indicándote los siguientes pasos, ya sea una llamada, una definición del alcance o una recomendación útil.</p>
-          <div className={styles.section5bloq}>
-            <div>
-              <Image src={Mail} alt="Email"></Image>
+        <section className={styles.section} id="servicios">
+          <div className={styles.container}>
+            <div className={styles.sectionIntro}>
+              <div>
+                <p className={styles.eyebrow}>Servicios</p>
+                <h2>Tecnología útil para problemas reales.</h2>
+              </div>
+              <p>La conversación comienza por la fricción del negocio, no por una lista de tecnologías. Diseñamos la solución adecuada para el contexto, el equipo y el objetivo.</p>
             </div>
-            <span>lumoraclientsupport@gmail.com</span>
-          </div>
-          <div className={styles.section5bloq}>
-            <div>
-              <Image src={Map} alt="Mapa"></Image>
+
+            <div className={styles.serviceGrid}>
+              {services.map(({ number, slug, icon: Icon, title, description, items }) => (
+                <article className={styles.serviceCard} key={number}>
+                  <div className={styles.serviceTop}>
+                    <span className={styles.iconBox}><Icon size={24} strokeWidth={1.8} aria-hidden="true" /></span>
+                    <span className={styles.cardNumber}>{number}</span>
+                  </div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <ul>
+                    {items.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                  <Link className={styles.serviceLink} href={`/servicios/${slug}`}>
+                    Conocer el servicio <ArrowRight size={17} aria-hidden="true" />
+                  </Link>
+                </article>
+              ))}
             </div>
-            <span>Cali, Colombia - Presencia global</span>
           </div>
-        </div>
-        <div>
-          <Formulario></Formulario>
-        </div>
-      </section>
+        </section>
+
+        <section className={styles.trustSection} id="por-que">
+          <div className={styles.container}>
+            <div className={styles.trustGrid}>
+              <div className={styles.trustCopy}>
+                <p className={styles.eyebrowLight}>Por qué Lumora</p>
+                <h2>El cuidado de un estudio.<br /><span>El rigor de la ingeniería.</span></h2>
+                <p>Combinamos comprensión del negocio, diseño de producto e ingeniería de software para construir soluciones claras, mantenibles y orientadas a resultados.</p>
+                <Link className={styles.lightLink} href="#metodo">Conoce nuestro método <ArrowRight size={18} /></Link>
+              </div>
+
+              <div className={styles.differentiatorList}>
+                {differentiators.map(({ icon: Icon, title, text }, index) => (
+                  <article key={title}>
+                    <span><Icon size={22} strokeWidth={1.8} aria-hidden="true" /></span>
+                    <div>
+                      <small>0{index + 1}</small>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.section} id="metodo">
+          <div className={styles.container}>
+            <div className={styles.methodHeader}>
+              <div>
+                <p className={styles.eyebrow}>Método Lumora</p>
+                <h2>Entender antes de diseñar.<br />Validar antes de escalar.</h2>
+              </div>
+              <p>Un proceso claro permite saber qué sucede en cada etapa, qué decisión sigue y cómo comprobamos el avance.</p>
+            </div>
+
+            <div className={styles.methodGrid}>
+              {method.map(({ number, title, text, icon: Icon }) => (
+                <article className={styles.methodStep} key={number}>
+                  <div className={styles.stepTop}>
+                    <span>{number}</span>
+                    <Icon size={22} strokeWidth={1.8} aria-hidden="true" />
+                  </div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.faqSection} id="faq">
+          <div className={styles.container}>
+            <div className={styles.faqGrid}>
+              <div className={styles.faqIntro}>
+                <p className={styles.eyebrow}>Preguntas frecuentes</p>
+                <h2>Respuestas directas.</h2>
+                <p>¿Tienes una pregunta que no aparece aquí? Escríbenos y te responderemos con claridad sobre el siguiente paso.</p>
+              </div>
+              <FAQ />
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.contactSection} id="contacto">
+          <div className={styles.container}>
+            <div className={styles.contactPanel}>
+              <div className={styles.contactCopy}>
+                <p className={styles.eyebrowLight}>Contacto</p>
+                <h2>Cuéntanos qué proceso quieres mejorar.</h2>
+                <p>Empezaremos por entender el problema y te propondremos un siguiente paso útil: una llamada, un diagnóstico o una recomendación concreta.</p>
+                <div className={styles.contactDetails}>
+                  <a href="mailto:lumoraclientsupport@gmail.com"><Mail size={19} /> lumoraclientsupport@gmail.com</a>
+                  <p><MapPin size={19} /> Cali, Colombia · Atendemos empresas en todo el país</p>
+                </div>
+              </div>
+              <Formulario />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </>
   )
 }
-
-export default Home

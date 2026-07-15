@@ -1,18 +1,26 @@
-.buttonq {
-    border-bottom: 1px solid #7A8191;
-    margin-bottom: 20px;
-    padding: 10px 20px;
+.list { border-top: 1px solid var(--border-strong); }
+
+.item { border-bottom: 1px solid var(--border-strong); }
+.item h3 { font-size: inherit; }
+
+.item button {
+  display: flex;
+  width: 100%;
+  min-height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 4px;
+  border: 0;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
 }
 
-.buttonq button {
-    border: none;
-    background-color: #FCFBFE;
-    font-size: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
+.item button span { color: var(--text-primary); font-size: 18px; font-weight: 600; line-height: 1.4; }
+.item button svg { flex: 0 0 auto; color: var(--brand-primary-hover); transition: transform var(--motion-standard); }
+.rotated { transform: rotate(180deg); }
+.answer { padding: 0 48px 24px 4px; }
+.answer p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; }
 
-.buttonq p {
-    font-size: 16px;
-    color: #7A8191;
-}
+@media (prefers-reduced-motion: reduce) { .item button svg { transition: none; } }

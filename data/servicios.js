@@ -1,11 +1,7 @@
 export const SERVICIO_OPTIONS = [
-    {id: 'Ai-agente', label: 'AI Agente'},
-    {id: 'Chatbot', label: 'Chatbot'},
-    {id: 'Desarrollo-web', label: 'Desarrollo web'},
-    {id: 'Software-empresarial', label: 'Software empresarial'},
-    {id: 'Automatizacion-proceso', label: 'Automatizacion de procesos'},
-    {id: 'Proyecto-freenlance', label: 'Proyecto freelance'},
-    {id: 'Seo', label: 'Optimizacion SEO'},
-    {id: 'Consulta-digital', label: 'Consulta digital'},
-    {id: 'No=estoy-seguro-aun', label: 'No estoy seguro'}
+  { id: 'software-medida', label: 'Software a medida' },
+  { id: 'automatizacion-integraciones', label: 'Automatización e integraciones' },
+  { id: 'ia-aplicada', label: 'Inteligencia artificial aplicada' },
+  { id: 'consultoria-evolucion', label: 'Consultoría y evolución tecnológica' },
+  { id: 'no-estoy-seguro', label: 'Aún no estoy seguro' },
 ]
